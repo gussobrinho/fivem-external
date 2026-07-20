@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Cheat">
+      <UniqueIdentifier>{ff06c6ee-f5ad-419b-be1d-c0f9f2d37417}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cheat\SDK">
+      <UniqueIdentifier>{8758b129-3920-4829-b352-f62606e984b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cheat\SDK\Game">
+      <UniqueIdentifier>{b3c7d8a5-0409-45e8-a23c-281a7c17b910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cheat\SDK\CPed">
+      <UniqueIdentifier>{a198e712-ad27-4d85-b4cf-8f93e6483fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Globals">
+      <UniqueIdentifier>{faa5aaad-4590-4f1b-9099-2a668284fa9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{6f7df9fd-f5d6-49fc-9967-51d35ee2b505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\ImGui">
+      <UniqueIdentifier>{9ed16f44-8e7e-4efa-996c-38495a8aeda8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Overlay">
+      <UniqueIdentifier>{61d823ac-3618-4c58-a2aa-335dc712b977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Memory">
+      <UniqueIdentifier>{2fd2ae85-874d-4106-bff6-949cb8b5eadb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\SimpleMath">
+      <UniqueIdentifier>{d60cc751-bfec-4962-998a-5c92104381c5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cheat\Cheat.h">
+      <Filter>Cheat</Filter>
+    </ClInclude>
+    <ClInclude Include="Cheat\SDK\Game\GameSDK.h">
+      <Filter>Cheat\SDK\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Cheat\SDK\CPed\CPed.h">
+      <Filter>Cheat\SDK\CPed</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals\Globals.h">
+      <Filter>Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\SimpleMath\SimpleMath.h">
+      <Filter>Framework\SimpleMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Memory\Memory.h">
+      <Filter>Framework\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Overlay\Overlay.h">
+      <Filter>Framework\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imconfig.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_dx11.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_impl_win32.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imgui_internal.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_rectpack.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_textedit.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\ImGui\imstb_truetype.h">
+      <Filter>Framework\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Cheat\SDK\Game\offset.h">
+      <Filter>Cheat\SDK\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Framework\Overlay\fontawesome.h" />
+    <ClInclude Include="Cheat\fontawesomeicons.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cheat\Features.cpp">
+      <Filter>Cheat</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat\SDK\Game\GameSDK.cpp">
+      <Filter>Cheat\SDK\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat\SDK\CPed\CPed.cpp">
+      <Filter>Cheat\SDK\CPed</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals\Globals.cpp">
+      <Filter>Globals</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Memory\Memory.cpp">
+      <Filter>Framework\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\Overlay\Overlay.cpp">
+      <Filter>Framework\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_demo.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_draw.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_dx11.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_impl_win32.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_tables.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Framework\ImGui\imgui_widgets.cpp">
+      <Filter>Framework\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat\Menu.cpp">
+      <Filter>Cheat</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat\Visual.cpp">
+      <Filter>Cheat</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Framework\SimpleMath\SimpleMath.inl">
+      <Filter>Framework\SimpleMath</Filter>
+    </None>
+  </ItemGroup>
+</Project>
