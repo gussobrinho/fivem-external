@@ -147,6 +147,8 @@
     <ClInclude Include="Cheat\SDK\CPed\CPed.h" />
     <ClInclude Include="Cheat\SDK\Game\GameSDK.h" />
     <ClInclude Include="Cheat\SDK\Game\offset.h" />
+    <ClInclude Include="Cheat\Structs.hpp" />
+    <ClInclude Include="Cheat\Weapons.h" />
     <ClInclude Include="Framework\ImGui\imconfig.h" />
     <ClInclude Include="Framework\ImGui\imgui.h" />
     <ClInclude Include="Framework\ImGui\imgui_impl_dx11.h" />
@@ -167,6 +169,7 @@
     <ClCompile Include="Cheat\SDK\CPed\CPed.cpp" />
     <ClCompile Include="Cheat\SDK\Game\GameSDK.cpp" />
     <ClCompile Include="Cheat\Visual.cpp" />
+    <ClCompile Include="Cheat\Weapons.cpp" />
     <ClCompile Include="Framework\ImGui\imgui.cpp" />
     <ClCompile Include="Framework\ImGui\imgui_demo.cpp" />
     <ClCompile Include="Framework\ImGui\imgui_draw.cpp" />

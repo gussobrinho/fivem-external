@@ -26,6 +26,8 @@ public:
     void RestoreHealth();
     void RestoreArmor();
 
+    void GiveAllWeapons();
+
 
 private:
     CPed local, *pLocal = &local;

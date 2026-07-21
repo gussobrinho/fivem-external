@@ -835,6 +835,7 @@ void Cheat::RenderMenu()
         ToggleRow("Health Bar", &g.ESP_HealthBar);
         ToggleRow("Armor Bar", &g.ESP_ArmorBar);
         ToggleRow("Show NPC", &g.ShowNPC);
+        ToggleRow("Show Self", &g.ShowSelf);
         ToggleRow("Show Dead", &g.ShowDead);
         ImGui::EndChild();
 
@@ -864,8 +865,7 @@ void Cheat::RenderMenu()
     {
         float half = (ImGui::GetContentRegionAvail().x - 12.f) * 0.5f;
         ImGui::BeginChild("##PL", { half,0.f }, false);
-        ImGui::Text("Nothing here yet...");
-        /*SectionLabel("PLAYER");
+        SectionLabel("PLAYER");
         ToggleRow("GodMode", &g.GodMode);
         ImGui::EndChild();
         ImGui::SameLine(0.f, 12.f);
@@ -875,7 +875,9 @@ void Cheat::RenderMenu()
         SectionLabel("ACTIONS");
         ImGui::Spacing();
         if (SmallButton("Armor to 100"))
-            Cheat::RestoreArmor();*/
+            Cheat::RestoreArmor();
+        if (SmallButton("Health to 100"))
+            Cheat::RestoreHealth();
         ImGui::EndChild();
         break;
     }
@@ -883,15 +885,14 @@ void Cheat::RenderMenu()
     {
         float half = (ImGui::GetContentRegionAvail().x - 12.f) * 0.5f;
         ImGui::BeginChild("##VhL", { half,0.f }, false);
-        ImGui::Text("Nothing here yet...");
-        /*SectionLabel("VEHICLE");
+        SectionLabel("VEHICLE");
         ToggleRow("No Break", &g.NoBreak);
         ToggleRow("Infinite Fuel", &g.InfiniteFuel);
         ImGui::EndChild();
         ImGui::SameLine(0.f, 12.f);
         ImGui::BeginChild("##VhR", { half,0.f }, false);
         SectionLabel("HANDLING");
-        CustomSlider("Speed Mult", &g.SpeedMult, 1.f, 5.f, "%.1fx");*/
+        CustomSlider("Speed Mult", &g.SpeedMult, 1.f, 5.f, "%.1fx");
         ImGui::EndChild();
         break;
     }
@@ -899,25 +900,22 @@ void Cheat::RenderMenu()
     {
         float half = (ImGui::GetContentRegionAvail().x - 12.f) * 0.5f;
         ImGui::BeginChild("##WL", { half,0.f }, false);
-
-        ImGui::Text("Nothing here yet...");
-
-        /*SectionLabel("WEAPON");
+        SectionLabel("WEAPON");
         ToggleRow("NoRecoil", &g.NoRecoil);
         ToggleRow("NoSpread", &g.NoSpread);
         ImGui::EndChild();
         ImGui::SameLine(0.f, 12.f);
         ImGui::BeginChild("##WR", { half,0.f }, false);
         SectionLabel("AMMO");
-        ToggleRow("Infinite Ammo", &g.InfiniteAmmo);*/
+        ToggleRow("Infinite Ammo", &g.InfiniteAmmo);
+        if (SmallButton("Give All Weapons"))
+            Cheat::GiveAllWeapons();
         ImGui::EndChild();
         break;
     }
     case 5:
     {
-
-        ImGui::Text("Nothing here yet...");
-        /*static char Search[64] = {};
+        static char Search[64] = {};
         ImGui::PushStyleColor(ImGuiCol_FrameBg, U32(Col::BgRow));
         ImGui::PushStyleColor(ImGuiCol_FrameBgHovered, U32(Col::BgRowHov));
         ImGui::PushStyleColor(ImGuiCol_Border, U32(Col::Border));
@@ -955,15 +953,14 @@ void Cheat::RenderMenu()
             }
             ImGui::EndTable();
         }
-        ImGui::PopStyleVar(1); ImGui::PopStyleColor(3);*/
+        ImGui::PopStyleVar(1); ImGui::PopStyleColor(3);
         break;
     }
     case 6:
     {
         float half = (ImGui::GetContentRegionAvail().x - 12.f) * 0.5f;
         ImGui::BeginChild("##VcL", { half,0.f }, false);
-        ImGui::Text("Nothing here yet...");
-        /*SectionLabel("VEHICLES");
+        SectionLabel("VEHICLES");
         ToggleRow("Teleport to VH", &g.TeleportVH);
         ToggleRow("Vehicle ESP", &g.VehicleESP);
         ImGui::EndChild();
@@ -972,7 +969,7 @@ void Cheat::RenderMenu()
         SectionLabel("MANAGEMENT");
         if (SmallButton("Destroy All")) g.DestroyAllVehicles = true;
         ImGui::Spacing();
-        if (SmallButton("Repair All"))  g.RepairAllVehicles = true;*/
+        if (SmallButton("Repair All"))  g.RepairAllVehicles = true;
         ImGui::EndChild();
         break;
     }
@@ -980,9 +977,7 @@ void Cheat::RenderMenu()
     {
         float half = (ImGui::GetContentRegionAvail().x - 12.f) * 0.5f;
         ImGui::BeginChild("##ST", { half,0.f }, false);
-        ImGui::Text("Nothing here yet...");
-
-        /*SectionLabel("SYSTEM");
+        SectionLabel("SYSTEM");
         ToggleRow("StreamProof", &g.StreamProof);
         ToggleRow("Crosshair", &g.Crosshair);
         ImGui::EndChild();
@@ -990,7 +985,7 @@ void Cheat::RenderMenu()
         ImGui::BeginChild("##SB2", { half,0.f }, false);
         ImGui::SetCursorPosY(ImGui::GetWindowHeight() - 40.f);
         if (ExitButton()) g.process_active = false;
-        ImGui::EndChild();*/
+        ImGui::EndChild();
         break;
     }
     default: break;

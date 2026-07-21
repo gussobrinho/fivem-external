@@ -42,7 +42,7 @@ void Cheat::UpdateList()
 
         for (int i = 0; i < 256; i++)
         {
-            if (entitylist.entity[i].address == NULL || entitylist.entity[i].address == local.address)
+            if (entitylist.entity[i].address == NULL)
                 continue;
 
             CPed p = CPed();
@@ -63,7 +63,8 @@ void Cheat::Misc()
     if (g.GodMode && local.address)
     {
         local.UpdateStatic();  // Refresh max health value
-        m.Write<float>(local.address + offset::m_flHealth, 100.0f);
+        float maxHealth = m.Read<float>(local.address + offset::m_flHealthMax);
+        m.Write<float>(local.address + offset::m_flHealth, maxHealth);
     }
 }
 
@@ -81,7 +82,8 @@ void Cheat::RestoreHealth()
     if (!local.address)
         return;
 
-    m.Write<float>(local.address + offset::m_flHealth, 100.0f);
+    float maxHealth = m.Read<float>(local.address + offset::m_flHealthMax);
+    m.Write<float>(local.address + offset::m_flHealth, maxHealth);
 }
 
 void Cheat::RestoreArmor()

@@ -42,6 +42,7 @@ struct Globals
     float ESP_SkeletonOutlineThickness = 1.5f; 
 
     bool ShowNPC = false;
+    bool ShowSelf = false;
 
 
     float ESP_HealthBar_OffsetX = 0.f;

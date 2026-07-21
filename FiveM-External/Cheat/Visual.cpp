@@ -34,6 +34,9 @@ void Cheat::RenderESP()
         if (!pEntity->Update())
             continue;
 
+        if (!g.ShowSelf && pEntity->IsPlayer())
+            continue;
+
         float pDistance = GetDistance(pEntity->m_vecPosition, pLocal->m_vecPosition);
 
         if (pDistance >= g.ESP_MaxDistance)

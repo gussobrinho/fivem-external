@@ -87,6 +87,10 @@
     </ClInclude>
     <ClInclude Include="Framework\Overlay\fontawesome.h" />
     <ClInclude Include="Cheat\fontawesomeicons.h" />
+    <ClInclude Include="Cheat\Weapons.h" />
+    <ClInclude Include="Cheat\Structs.hpp">
+      <Filter>Cheat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cheat\Features.cpp">
@@ -136,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="Cheat\Visual.cpp">
       <Filter>Cheat</Filter>
+    </ClCompile>
+    <ClCompile Include="Cheat\Weapons.cpp">
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
